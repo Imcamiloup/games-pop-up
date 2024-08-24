@@ -14,6 +14,9 @@ server.use(express.json()); //middleware post
 server.use(express.urlencoded({ extended: true }));
 //Use the router for manage the routes
 
+server.use("/ping", (req, res) => {
+    res.send("server is running");
+    });
 server.use(router);
 
 export default server;
